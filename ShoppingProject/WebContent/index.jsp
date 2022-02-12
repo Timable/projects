@@ -34,7 +34,7 @@
 		   margin-bottom: 20px;
 	   }
 	   
-	   .container{
+	   .container {
 	   		overflow: hidden;
 	   }
 	   

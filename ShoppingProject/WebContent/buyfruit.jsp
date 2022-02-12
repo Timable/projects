@@ -70,7 +70,7 @@ ArrayList<ReviewVO> rvo = godao.getreview(request, response);
          <br>
          <div class="form-group" style="text-align: left;">
             <label>가격 : 20</label><span>&nbsp;원</span>
-            <input type="hidden" value="20" name="price">
+            <input type="hidden" value="100" name="price">
          </div>
          <div class="form-group" style="text-align: left;">
             <label>배송비 : </label><span>&nbsp;1원</span>

@@ -22,14 +22,14 @@ import reviewVO.ReviewVO;
 
 public class GogoInfoDAO {
 
-   private Connection con;//
-   PreparedStatement ps = null;// 
+   private Connection con;//  ‘ † ê°ì²´ con  „  –¸
+   PreparedStatement ps = null;//  ‘ †ê°ì²´.×¼”ì†Œ “œ()ë¥   †µ •´  žë°”ë¬¸ ž¥ „ sqlë¬¸ìž¥ œ¼ë¡  ë³  ™˜
    PreparedStatement ps1 = null;
-   ResultSet rs = null;//
+   ResultSet rs = null;//sqlë¬¸ìž¥ „ ê²  ƒ‰ „  œ„ •œ ResultSet rsê°ì²´  ƒ „±
    
    //************
    public GogoInfoDAO() throws ClassNotFoundException, SQLException{
-      con = new GogoDBConn().getConnection();// 
+      con = new GogoDBConn().getConnection();//conê°ì²´ë¥   †µ •´ ë¶ˆëŸ¬ ˜¨ GogoDBConn()ê³   —°ê² 
    }
    
    public boolean insert_customer(String id1, String pw1, String name1, String birth1, String gender1, 
@@ -39,8 +39,8 @@ public class GogoInfoDAO {
       String sql = "insert into customer values(?,?,?,?,?,?,?)";
       String sql1 = "select * from customer";
       int year = Integer.parseInt(birth1.substring(0,4));
-      int month = Integer.parseInt(birth1.substring(4,6));//
-      int day = Integer.parseInt(birth1.substring(6,8));//
+      int month = Integer.parseInt(birth1.substring(4,6));//ê·   ’¤ — 2 žë¦ ( ›”) : 10
+      int day = Integer.parseInt(birth1.substring(6,8));//ê·¸ë’¤ 2 žë¦ ( ¼) : 21
       Date d = new Date(year, month, day);
       
       if(year >= 2002) {
@@ -247,6 +247,7 @@ public class GogoInfoDAO {
 
 
 }
+
 
 
 

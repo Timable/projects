@@ -2,16 +2,15 @@
     pageEncoding="UTF-8"%>
     
     <%
-    	String price = request.getParameter("price");
-    	String product = request.getParameter("product");
-    	
-    	if(session.getAttribute("sid") == null){ %>
-    	<script>
-    		location = "reviewfail.jsp"
-    	</script>
-    		
-    	<%}%>
-    %>
+       String price = request.getParameter("price");
+       String product = request.getParameter("product");
+       
+       if(session.getAttribute("sid") == null){ %>
+       <script>
+          location = "reviewfail.jsp"
+       </script>
+          
+       <%}%>
 <!DOCTYPE html>
 <html>
 <head>

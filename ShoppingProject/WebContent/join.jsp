@@ -79,7 +79,7 @@
    
 	<div class="btn" align="center">
 	  	<input type="submit" id="join" value = "회원가입"> &nbsp;
-		<input type="reset" id="cancel" value="취소" onclick = "location.href='index.jsp';">
+		<input type="reset" id="cancel" value="취소" onclick = "location.href='joinfail2.jsp';">
 	</div>
 </form>
 

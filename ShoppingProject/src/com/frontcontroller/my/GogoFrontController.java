@@ -175,38 +175,38 @@ public class GogoFrontController extends HttpServlet {
          
          
       case "/review.do":
-         GogoInfoDAO godao5 = null;
-         String star = request.getParameter("point");
-         String review1 = request.getParameter("review");
-         String product2 = request.getParameter("product");
+    	  GogoInfoDAO godao5 = null;
+    	  String star = request.getParameter("point");
+    	  String review1 = request.getParameter("review");
+    	  String product2 = request.getParameter("product");
 //          Date d = new Date();
 //          String d1 = d.toLocaleString();
-         HttpSession session1 = request.getSession();
+    	  HttpSession session1 = request.getSession();
           String sesid1 = (String)session1.getAttribute("sid");
           
          try {
-         godao5 = new GogoInfoDAO();
-         
-         godao5.insert_review(sesid1, product2, star, review1);
-      } catch (ClassNotFoundException e) {
-         // TODO Auto-generated catch block
-         e.printStackTrace();
-      } catch (SQLException e) {
-         // TODO Auto-generated catch block
-         e.printStackTrace();
-      } 
+			godao5 = new GogoInfoDAO();
+			
+			godao5.insert_review(sesid1, product2, star, review1);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
          
          /*HttpSession session2 = request.getSession();
          session2.setAttribute("cproduct", product2);*/
          
          ArrayList<ReviewVO> rvo = null;
-        
-           try {
-         rvo = godao5.getreview(request, response);
-      } catch (SQLException e) {
-         // TODO Auto-generated catch block
-         e.printStackTrace();
-      }
+   	  
+   	  	try {
+			rvo = godao5.getreview(request, response);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
          
          
           

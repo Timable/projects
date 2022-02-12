@@ -112,7 +112,7 @@
             <td width=70% align="center"><%=temp.getProduct() %></td>
             <td><%=temp.getCount() %></td>
             <td><%=temp.getPrice() %></td>
-            <td><%=temp.getCount()*temp.getPrice() %>
+            <td><%=temp.getPrice()*temp.getCount() %></td>
             <% sum += (temp.getCount() * temp.getPrice()); %>
             <form action="delete.do">
             <input type="hidden" name="product" value=<%=temp.getProduct()%>>
