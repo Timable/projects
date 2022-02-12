@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>고고주류</title>
+<link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
+<style>
+	
+	.popup {
+		/* background-color:ivory; */
+		margin: 40px;
+		align-items: center;
+		
+	}
+	
+	.popup .title {
+		background-color: #FFF0CB;
+		border-radius: 10px;
+		font-family: 'Song Myung', serif;
+		font-size : 30px;
+	}
+	
+	.popup .content {
+		font-family: 'Song Myung', serif;
+		font-size : 20px;
+	}
+	
+	.content span {
+		color: #FFAA17;
+	}
+	
+	.popup img {
+		margin: 40px 0 20px 120px;
+	}
+	
+	.cookie {
+		margin-left: 150px;
+		font-size: 12px;
+	}
+	
+</style>
+<script>
+
+   window.onunload=function(){  
+        popupCookie();
+        } 
+
+ function popupCookie() { 
+                if(document.f1.chk1.checked == true) { 
+                        var today = new Date()
+                       today.setDate(today.getDate() + 1)
+                        
+                        document.cookie = "noticeCookie=notice1; expires="
+                                               + today.toUTCString() 
+                }
+        }
+ 
+</script>
+</head>
+<body>
+	<div class="popup">
+		<img src="img/popup.png">
+		<div class="title">고고주류 오픈기념 이벤트</div>
+		<br>
+		<div class="content" align="center">
+			고고주류 사이트 신규오픈 기념 <br>
+			전품목 <span>20% 할인</span> 이벤트 진행중입니다. <br>
+			고객 여러분의 많은 이용 부탁드립니다!
+		</div>
+		<br>
+		<form name="f1" class="cookie">
+			<input type="checkbox" name="chk1">
+			오늘 하루 이 창 띄우지 않음 <br><br>
+		</form>
+		
+		
+	</div>
+</body>
+</html>
